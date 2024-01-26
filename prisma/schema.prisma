@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model catalog {
+  id              BigInt    @id @default(autoincrement())
+  name            String?   @db.VarChar
+  price           BigInt?
+  date            DateTime? @db.Date
+  manufacturer    String?   @db.VarChar
+  photo           String?   @db.VarChar
+  type            String?   @db.VarChar
+  battery_type    String?   @db.VarChar
+  pixels          BigInt?
+  max_FPS_video   BigInt?
+  max_FPS_photo   BigInt?
+  max_sensitivity BigInt?
+  min_sensitivity BigInt?
+  max_resolution  String?   @db.VarChar
+  wi_fi           Boolean?
+  card_support    String?   @db.VarChar
+  matrix_type     String?   @db.VarChar
+  matrix_size     String?   @db.VarChar
+  popularity      BigInt?
+  rating          BigInt?
+  warranty        BigInt?
+  in_stock        BigInt?
+}

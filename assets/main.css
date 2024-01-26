@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f8f7f9;
+}
+
+.button_regular {
+  @apply flex items-center transition duration-200 hover:bg-sky-500 text-lg px-7 py-2 bg-sky-400 text-white border;
+}
+
+.button__image {
+  @apply h-[20px] w-[20px] mr-2;
+}
+
+.button_centered {
+  @apply mx-auto;
+}
+
+.preloader-wrapper {
+  @apply flex justify-center items-center h-full w-full;
+}
+
+.preloader-wrapper__text {
+  @apply text-2xl text-center;
+}
+
+.skeleton-bg {
+  animation: skeletonBg 1.5s infinite;
+}
+
+.button-skeleton {
+  @apply flex items-center transition duration-200 text-lg px-7 py-2 text-white border min-w-[130px];
+}
+
+.discount-bar {
+  @apply absolute top-[5px] left-[5px] flex justify-between w-[calc(100%-10px)];
+}
+
+.discount-bar__text,
+.discount-bar__percentage {
+  @apply px-2 py-1 bg-red-500 text-white rounded-md;
+}
+
+@keyframes skeletonBg {
+  0% {
+    background-color: #eeeeee;
+  }
+  50% {
+    background-color: #e5e5ea;
+  }
+  100% {
+    background-color: #eeeeee;
+  }
+}
